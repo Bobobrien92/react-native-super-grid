@@ -143,6 +143,7 @@ class FlatGrid extends React.Component {
           },
           style,
         ]}
+        contentContainerStyle={this.props.contentContainerStyle}
         onLayout={this.onLayout}
         keyExtractor={(_, index) => `row_${index}`}
         {...restProps}
@@ -160,6 +161,7 @@ FlatGrid.propTypes = {
   fixed: PropTypes.bool,
   spacing: PropTypes.number,
   style: ViewPropTypes.style,
+  contentContainerStyle: ViewPropTypes.style,
   itemContainerStyle: ViewPropTypes.style,
   staticDimension: PropTypes.number,
   horizontal: PropTypes.bool,
@@ -171,6 +173,7 @@ FlatGrid.defaultProps = {
   itemDimension: 120,
   spacing: 10,
   style: {},
+  contentContainerStyle: undefined,
   itemContainerStyle: undefined,
   staticDimension: undefined,
   horizontal: false,
